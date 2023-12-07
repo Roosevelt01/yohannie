@@ -1,167 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>¿Quieres salir conmigo?</title>
+  <title>Título de la página</title>
   <style>
     /* Estilos generales */
     body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background: url(heart-3089409_1920.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
+      margin: 0;
+      padding: 0;
+      background: url(design-3289984_1920.png) no-repeat center center fixed;
       background-size: cover;
-      background-color: aliceblue;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      font-family: sans-serif;
+    
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
     }
 
     h1 {
-      margin-top: 50px;
-      color: #f56efa;
-    }
-
-    .gif-container {
-      position: relative;
-      display: inline-block;
-      margin-top: 30px;
+      color: #80000b;
+      font-size:5vw!important;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
     }
 
     .gif {
-      max-width: 100%; 
-    }
-
-    /* Estilos de los botones */
-    .btn-container {
-      margin-top: 20px;
-    }
-
-    .btn-container button {
-      margin: 0 10px;
-      padding: 10px 40px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius:25px;
-    }
-
-    .btn-yes {
-      background-color: #f56efa;
-      color: white;
-      transition: all 0.3s; /* Transición suave */
-    }
-
-    .btn-no {
-      background-color: #f44336;
-      color: white;
-      transition: transform 0.1s; /* Transición suave */
-    }
-
-    .btn-no:hover {
-      transform: translate(-180px, -180px); /* Movimiento al pasar el mouse */
+      max-width: 150%;
     }
 
     /* Estilos para dispositivos móviles */
-    @media (min-width: 480px) {
+    @media (mim-width: 767px) {
       h1 {
         font-size: 24px;
-        margin-top: 30px;
-      }
-
-      .gif-container {
-        margin-top: 20px;
-      }
-
-      .gif {
-        width: 80%;
-      }
-
-      .btn-container {
-        margin-top: 20px;
-      }
-
-      .btn-container button {
-        font-size: 14px;
-        padding: 8px 16px;
       }
     }
 
     /* Estilos para tabletas */
-    @media (min-width: 481px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
       h1 {
-        font-size: 32px;
-      }
-
-      .gif-container {
-        margin-top: 40px;
-      }
-
-      .gif {
-        width: 60%;
-      }
-
-      .btn-container {
-        margin-top: 30px;
-      }
-
-      .btn-container button {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 28px;
       }
     }
 
     /* Estilos para escritorios */
-    @media (min-width: 1025px) {
+    @media (min-width: 1024px) {
       h1 {
-        font-size: 48px;
-      }
-
-      .gif-container {
-        margin-top: 50px;
-      }
-
-      .gif {
-        width: 70%;
-      }
-
-      .btn-container {
-        margin-top: 10px;
+        font-size: 36px;
       }
     }
-
-</style>
+  </style>
 </head>
 <body>
-  <h1>Feliz Cumpleaños</h1>
-  <div class="gif-container">
-    <img class="gif" src="f9HVG8n3R4PanFkhFK.webp" alt="Imagen GIF">
+  <div class="container">
+    <h1>Feliz cumpleaños!!!</h1>
+    <img class="gif" src="bonny.webp" alt="Imagen GIF">
   </div>
-  <!-- <div class="btn-container">
-    <button class="btn-yes" onclick="cambiarContenido()">Sí</button>
-    <button class="btn-no" onmousemove="evitarContacto()">No</button>
-  </div> -->
-
-  <script>
-    function cambiarContenido() {
-      document.querySelector('.gif').src = 'ruta_de_nueva_imagen.gif';
-      document.querySelector('h1').innerText = '¡Gracias por aceptar!';
-    }
-
-    function evitarContacto() {
-      var btnNo = document.querySelector('.btn-no');
-      var rect = btnNo.getBoundingClientRect();
-      var mouseX = event.clientX;
-      var mouseY = event.clientY;
-
-      var btnWidth = rect.width;
-      var btnHeight = rect.height;
-
-      var btnX = rect.x;
-      var btnY = rect.y;
-
-      var offsetX = mouseX - btnX - btnWidth / 2;
-      var offsetY = mouseY - btnY - btnHeight / 2;
-
-      btnNo.style.transform = 'translate(' + offsetX * -3 + 'px, ' + offsetY * -3 + 'px)';
-    }
-  </script>
 </body>
 </html>
